@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="container">
+        <div class="stack-lg">
+          <div class="stack-lg">
+            <div class="header">
+              <div class="user">
+                <img
+                  width="52"
+                  height="52"
+                  src="./images/user.png"
+                  class="user__img"
+                />
+
+                <div>
+                  <h1>Yura Streltsov</h1>
+                  <span class="user__id">@mestreltsov</span>
+                </div>
+              </div>
+
+              <a href="#">
+                <img src="./icons/settings.svg" />
+              </a>
+            </div>
+
+            <div class="tab">
+              <div class="tab-buttons">
+                <!-- 0 -->
+                <button class="tab-btn active">
+                  <img width="26" height="26" src="./icons/tether.svg" />
+                  <span>usdt</span>
+                </button>
+
+                <!-- 1 -->
+                <button class="tab-btn">
+                  <img width="26" height="26" src="./icons/ruble.svg" />
+                  <span>rub</span>
+                </button>
+              </div>
+
+              <!-- 0 -->
+              <div class="tab__panel active">
+                <div class="field invalid">
+                  <div class="field__input-wrapper">
+                    <img
+                      width="22"
+                      height="22"
+                      src="./icons/star_filled.svg"
+                      class="field__icon"
+                    />
+                    <input
+                      inputmode="numeric"
+                      type="text"
+                      class="field__input input"
+                      placeholder="Введите число от 100 до 2400"
+                    />
+
+                    <button class="field__clear">
+                      <img src="./icons/close.svg" />
+                    </button>
+                  </div>
+
+                  <div class="field__error-text">
+                    Минимальное количество - 100 звёзд
+                  </div>
+                </div>
+
+                <div class="stack-sm">
+                  <div class="field">
+                    <div class="field__top">
+                      <div class="field__label">Получатель</div>
+                      <button class="text-btn">/последний</button>
+                    </div>
+                    <div class="field__input-wrapper">
+                      <img
+                        width="22"
+                        height="22"
+                        src="./icons/wallet.svg"
+                        class="field__icon"
+                      />
+                      <input
+                        type="text"
+                        class="field__input input"
+                        placeholder="Кошелек получателя USDT в сети TON"
+                      />
+
+                      <button class="field__clear">
+                        <img src="./icons/close.svg" />
+                      </button>
+                    </div>
+
+                    <div class="field__error-text"></div>
+                  </div>
+
+                  <div class="field">
+                    <div class="field__input-wrapper">
+                      <img
+                        width="22"
+                        height="22"
+                        src="./icons/message.svg"
+                        class="field__icon"
+                      />
+                      <input
+                        type="text"
+                        class="field__input input"
+                        placeholder="Memo/Комментарий к продаже"
+                      />
+
+                      <button class="field__clear">
+                        <img src="./icons/close.svg" />
+                      </button>
+                    </div>
+
+                    <div class="field__info-text">
+                      Обязательно, если используете кошелёк биржи
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 1 -->
+              <div class="tab__panel">
+                <div class="field invalid">
+                  <div class="field__input-wrapper">
+                    <img
+                      width="22"
+                      height="22"
+                      src="./icons/star_filled.svg"
+                      class="field__icon"
+                    />
+
+                    <input
+                      inputmode="numeric"
+                      type="text"
+                      class="field__input input"
+                      placeholder="Введите число от 500 до 2400"
+                    />
+
+                    <button class="field__clear">
+                      <img src="./icons/close.svg" />
+                    </button>
+                  </div>
+
+                  <div class="field__error-text">
+                    Минимальное количество - 500 звёзд
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field__top">
+                    <div class="field__label">Получатель</div>
+                    <button class="text-btn">/последний</button>
+                  </div>
+                  <div class="field__input-wrapper">
+                    <img
+                      width="22"
+                      height="22"
+                      src="./icons/card.svg"
+                      class="field__icon"
+                    />
+                    <input
+                      inputmode="numeric"
+                      type="text"
+                      class="field__input input"
+                      placeholder="Номер карты получателя"
+                    />
+
+                    <button class="field__clear">
+                      <img src="./icons/close.svg" />
+                    </button>
+                  </div>
+
+                  <div class="field__error-text"></div>
+                  <div class="field__info-text">
+                    Только карты РФ или Казахстана
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="limit-card">
+              <div class="limit-card__info">
+                <div class="limit-card__title">
+                  <span>Ваш лимит в день: 2 400</span>
+                  <img width="12" height="12" src="./icons/star.svg" />
+                </div>
+                <div class="limit-card__text">
+                  Чтобы его увеличить, напишите в <a href="#">Поддержку.</a>
+                </div>
+              </div>
+              <img
+                width="36"
+                height="36"
+                src="./icons/chart.svg"
+                class="limit-card__img"
+              />
+            </div>
+
+            <button class="btn-primary" disabled>
+              <span>Продать</span>
+              <span class="btn-primary__amount">
+                <span>0</span>
+
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.38702 1.1529L10.7954 3.99082C10.9875 4.37781 11.4996 4.7648 11.9264 4.82929L14.4764 5.25927C16.1088 5.53877 16.4929 6.72124 15.3193 7.9037L13.3347 9.90315C13.004 10.2364 12.8119 10.8921 12.9186 11.3651L13.4841 13.8483C13.9323 15.8047 12.8973 16.568 11.1795 15.5467L8.78953 14.117C8.35208 13.859 7.64792 13.859 7.21047 14.117L4.82048 15.5467C3.10269 16.568 2.06775 15.8047 2.51586 13.8483L3.08138 11.3651C3.18807 10.9029 2.99601 10.2471 2.66525 9.90315L0.680743 7.9037C-0.492901 6.72124 -0.108823 5.52802 1.52361 5.25927L4.07363 4.82929C4.50041 4.75405 5.01255 4.37781 5.2046 3.99082L6.61298 1.1529C7.37051 -0.384301 8.62949 -0.384301 9.38702 1.1529Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <div class="divider"></div>
+          </div>
+
+          <div class="stack-md">
+            <h2>FAQ</h2>
+
+            <div class="stack-sm">
+              <div class="accordion">
+                <button class="accordion__toggle">Как вывести звезды?</button>
+                <div class="accordion__wrapper">
+                  <div class="accordion__inner">
+                    Здесь будут отображаться ваши последние покупки и продажи
+                    звезд.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion">
+                <button class="accordion__toggle">Как вывести звезды?</button>
+                <div class="accordion__wrapper">
+                  <div class="accordion__inner">
+                    Здесь будут отображаться ваши последние покупки и продажи
+                    звезд.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-md">
+            <h2>Последние продажи</h2>
+
+            <div class="stack-sm">
+              <div class="info-card">
+                <img width="32" height="32" src="./icons/folder_open.svg" />
+                <span>Здесь будут отображаться ваши последние продажи </span>
+              </div>
+
+              <div class="transaction-card">
+                <div class="transaction-card__left">
+                  <div class="transaction-card__icon-wrapper">
+                    <img width="10" height="10" src="./icons/arrow_up.svg" />
+                  </div>
+                  <div class="transaction-card__amount">
+                    <span>1 250</span>
+                    <img width="16" height="16" src="./icons/star.svg" />
+                  </div>
+                </div>
+
+                <div class="transaction-card__right">
+                  <div class="transaction-card__title">Telegram Stars</div>
+                  <div class="transaction-card__info">
+                    <img
+                      width="12"
+                      height="12"
+                      src="./icons/clock.svg"
+                      alt=""
+                    />
+                    <span>04.05.2025 19:58</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="transaction-card">
+                <div class="transaction-card__left">
+                  <div class="transaction-card__icon-wrapper">
+                    <img width="10" height="10" src="./icons/arrow_up.svg" />
+                  </div>
+                  <div class="transaction-card__amount">
+                    <span>1 250</span>
+                    <img width="16" height="16" src="./icons/star.svg" />
+                  </div>
+                </div>
+
+                <div class="transaction-card__right">
+                  <div class="transaction-card__title">Telegram Stars</div>
+                  <div class="transaction-card__info">
+                    <img
+                      width="12"
+                      height="12"
+                      src="./icons/tick_circle.svg"
+                      alt=""
+                    />
+                    <span>04.05.2025 19:58</span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn-secondary">Смотреть все</button>
+            </div>
+
+            <div class="copyright">
+              Нажимая кнопку «продать» вы соглашаетесь с <a href="#"
+                >публичной офертой,</a
+              > политикой защиты и обработки персональных данных и
+              даёте согласие на обработку персональных данных
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

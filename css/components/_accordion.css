@@ -1,0 +1,53 @@
+.accordion {
+  border-radius: 12px;
+  background-color: var(--bg-black-400);
+}
+
+.accordion.active .accordion__toggle::before {
+  content: url("../../icons/minus.svg");
+}
+
+.accordion__toggle {
+  position: relative;
+
+  padding: 12px 15px 10px 15px;
+  width: 100%;
+
+  text-align: left;
+}
+
+.accordion__toggle::before {
+  content: url("../../icons/plus.svg");
+
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  translate: 0 -50%;
+
+  display: grid;
+  place-items: center;
+
+  width: 20px;
+  aspect-ratio: 1;
+
+  background-color: var(--bg-black-300);
+  border-radius: 50%;
+
+  font-size: 0;
+  line-height: 0;
+}
+
+.accordion__wrapper {
+  height: 0;
+  overflow: hidden;
+
+  transition: height 150ms linear;
+}
+
+.accordion__inner {
+  padding: 0 15px 12px 15px;
+
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--text-400);
+}

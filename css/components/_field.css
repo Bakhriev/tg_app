@@ -1,0 +1,89 @@
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field.invalid .field__error-text {
+  display: block;
+}
+
+.field.invalid .field__info-text {
+  display: none;
+}
+
+.field__top {
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.field__input-wrapper {
+  position: relative;
+}
+
+.field__icon {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 16px;
+}
+
+.field__label {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.field__clear {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 16px;
+
+  width: 22px;
+  height: 22px;
+
+  display: none;
+}
+
+.field__clear:active {
+  scale: 0.97;
+}
+
+.field__input:not(:placeholder-shown) ~ .field__clear {
+  display: block;
+}
+
+.field__error-text {
+  display: none;
+  margin-top: 6px;
+
+  font-size: 12px;
+  color: var(--error-color);
+}
+
+.field__info-text {
+  margin-top: 6px;
+
+  font-size: 12px;
+  line-height: 1.25;
+  color: var(--blue-100);
+  padding-left: 14px;
+}
+
+.input {
+  padding-left: 50px;
+  height: 46px;
+
+  padding-right: 45px;
+  background-color: var(--bg-black-400);
+  border-radius: 12px;
+
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.input::placeholder {
+  color: var(--text-300);
+}

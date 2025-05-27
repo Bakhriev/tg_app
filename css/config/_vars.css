@@ -1,0 +1,33 @@
+:root {
+  /* Fonts */
+  --font-family: "Golos Text", san-serif;
+
+  /* Colors */
+  --bg-black-500: #202126;
+  --bg-black-400: #292b31;
+  --bg-black-300: #3f4149;
+  --bg-black-200: #848793;
+  --bg-black-100: #d5d8e4;
+
+  --text-400: #737787;
+  --text-300: #9a9da9;
+  --text-200: #b8b8c4;
+  --text-100: #fff;
+
+  --green-500: #2d4031;
+  --green-400: #377746;
+  --green-300: #3fad56;
+  --green-200: #a2f8b4;
+  --green-100: #23d748;
+
+  --orange-400: #423625;
+  --orange-300: #7c5319;
+  --orange-200: #a56d1e;
+  --orange-100: #ff9500;
+
+  --blue-300: #253841;
+  --blue-200: #1a73a3;
+  --blue-100: #0098ea;
+
+  --error-color: #d93f4a;
+}
