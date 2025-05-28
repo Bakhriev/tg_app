@@ -10,12 +10,13 @@
 }
 
 .app {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
-  background-color: var(--bg-black-500);
+  min-height: 100vh;
 
   padding-top: 24px;
   padding-bottom: 48px;
+
+  background-color: var(--bg-black-500);
 }

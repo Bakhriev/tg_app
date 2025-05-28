@@ -1,6 +1,7 @@
 .accordion {
   border-radius: 12px;
   background-color: var(--bg-black-400);
+  overflow: hidden;
 }
 
 .accordion.active .accordion__toggle::before {
@@ -14,6 +15,15 @@
   width: 100%;
 
   text-align: left;
+  transition: background-color 150ms ease-in-out;
+}
+
+.accordion__toggle:hover {
+  background-color: var(--bg-black-300);
+}
+
+.accordion__toggle:active {
+  background-color: var(--bg-black-300);
 }
 
 .accordion__toggle::before {

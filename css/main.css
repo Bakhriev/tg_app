@@ -180,6 +180,10 @@
   background-color: var(--bg-black-200);
 }
 
+.tab-btn:active {
+  background-color: var(--bg-black-200);
+}
+
 .tab-btn.active {
   padding: 14px 8px;
 
@@ -203,6 +207,7 @@
   flex-direction: column;
   gap: 4px;
 }
+
 .limit-card__title {
   display: flex;
   align-items: center;
@@ -211,6 +216,7 @@
   font-size: 14px;
   line-height: 1.2;
 }
+
 .limit-card__text {
   font-size: 12px;
   color: var(--text-400);
@@ -223,4 +229,82 @@
 
 .limit-card__text a:hover {
   color: var(--text-100);
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 0;
+}
+
+.text-blue {
+  color: var(--blue-100);
+}
+
+.danger-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px;
+
+  border-radius: 12px;
+  background-color: var(--orange-400);
+}
+
+.danger-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.danger-card__title {
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--orange-100);
+}
+
+.danger-card__text {
+  font-size: 12px;
+  color: var(--orange-200);
+}
+
+.sell-page {
+}
+
+.sell-page__container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  flex-grow: 1;
+}
+
+.sell-page__stack {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.sell-page__link {
+  margin-top: auto;
+}
+
+.transaction {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transaction__key {
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--text-400);
+}
+
+.transaction__value {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }

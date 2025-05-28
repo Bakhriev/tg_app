@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="app sell-page">
+      <div class="container sell-page__container">
+        <div class="stack-lg sell-page__stack">
+          <div class="nav-header">
+            <button class="nav-btn">
+              <div class="nav-btn__icon-wrapper">
+                <img width="8" height="12" src="./icons/arrow_left.svg" />
+              </div>
+            </button>
+            <h1>Продажа</h1>
+          </div>
+
+          <div class="transaction">
+            <div class="transaction__item">
+              <div class="transaction__key">ID транзакции</div>
+              <div class="transaction__value">
+                <button
+                  class="copy-btn"
+                  data-copy="2a88f539-f7bd-438e-ad81-d8e777100486"
+                >
+                  <span>2a88f539-f7bd-438e-ad81-d8e777100486</span>
+                  <img
+                    class="copy-btn__copy-icon copy-btn__icon"
+                    width="16"
+                    height="16"
+                    src="./icons/doc_copy.svg"
+                  />
+                  <img
+                    class="copy-btn__copied-icon copy-btn__icon"
+                    width="16"
+                    height="16"
+                    src="./icons/doc_copy_tick.svg"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="transaction__item">
+              <div class="transaction__key">Реквизиты</div>
+              <div class="transaction__value">2200 4455 6677 9900</div>
+            </div>
+            <div class="transaction__item">
+              <div class="transaction__key">Количество</div>
+              <div class="transaction__value">
+                <span>1 250</span>
+                <img width="16" height="16" src="./icons/star.svg" />
+              </div>
+            </div>
+            <div class="transaction__item">
+              <div class="transaction__key">Сумма</div>
+              <div class="transaction__value">1 000 ₽</div>
+            </div>
+            <div class="transaction__item">
+              <div class="transaction__key">Услуга</div>
+              <div class="transaction__value">Продажа Telegram Stars</div>
+            </div>
+            <div class="transaction__item">
+              <div class="transaction__key">Статус</div>
+              <div class="transaction__value">
+                <span>Завершён</span>
+                <img width="12" height="12" src="./icons/tick_circle.svg" />
+              </div>
+            </div>
+            <div class="transaction__item">
+              <div class="transaction__key">Дата</div>
+              <div class="transaction__value">04.05.2025 19:58</div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="sell-page__link btn-secondary btn-secondary_bg_blue"
+          >
+            Задать вопрос по транзакции
+          </a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

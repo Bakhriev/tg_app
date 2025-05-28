@@ -1,6 +1,8 @@
 const accordionInit = () => {
   const accordions = document.querySelectorAll(".accordion");
 
+  if (!accordions.length) return;
+
   accordions.forEach((accordion) => {
     const btn = accordion.querySelector(".accordion__toggle");
     const wrapper = accordion.querySelector(".accordion__wrapper");
@@ -21,6 +23,9 @@ accordionInit();
 
 const tabInit = () => {
   const tab = document.querySelector(".tab");
+
+  if (!tab) return;
+
   const buttons = tab.querySelectorAll(".tab-btn");
   const panels = tab.querySelectorAll(".tab__panel");
 
@@ -36,3 +41,24 @@ const tabInit = () => {
 };
 
 tabInit();
+
+const copyInit = () => {
+  document.querySelectorAll(".copy-btn").forEach((button) => {
+    button.addEventListener("click", function () {
+      // Проверяем, не находится ли кнопка в состоянии "задержки"
+      if (this.classList.contains("copied")) return;
+
+      const textToCopy = this.getAttribute("data-copy");
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        this.classList.add("copied");
+
+        setTimeout(() => {
+          this.classList.remove("copied");
+        }, 2000);
+      });
+    });
+  });
+};
+
+copyInit();
