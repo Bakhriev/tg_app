@@ -79,3 +79,76 @@ const fieldsInit = () => {
 };
 
 fieldsInit();
+
+const RU_KZ_BINS = [
+  // Россия
+  "2200",
+  "2201",
+  "2202",
+  "2203",
+  "2204",
+  "4276",
+  "4282",
+  "4890",
+  "4627",
+  "5169",
+  "5213",
+  "5486",
+  "6037",
+  "6762",
+  // Казахстан (некоторые BIN)
+  "440563",
+  "440564",
+  "427749",
+  "514957",
+  "531212",
+  "537741",
+  "552346",
+];
+
+const formatAndValidateCardNumber = () => {
+  const field = document.querySelector('[data-field="credit-card"]');
+  console.log(field);
+
+  if (!field) return;
+
+  const errorText = "Введите валидный номер карты";
+
+  const errorField = field.querySelector(".field__error-text");
+  const input = field.querySelector('[data-card="credit-card"]');
+
+  input.addEventListener("input", function (e) {
+    // Удаляем все нецифры
+    let value = e.target.value.replace(/\D/g, "");
+
+    // Форматируем (XXXX XXXX XXXX XXXX)
+    value = value.replace(/(\d{4})(?=\d)/g, "$1 ").substring(0, 19);
+    e.target.value = value;
+
+    // Убираем пробелы для валидации
+    const rawValue = value.replace(/\s/g, "");
+
+    // Проверка формата
+    const isCorrectLength = rawValue.length === 16;
+    const isFormatValid = /^(\d{4} ){3}\d{4}$/.test(value);
+
+    // BIN проверка (по первым 4–6 цифрам)
+    const bin4 = rawValue.slice(0, 4);
+    const bin6 = rawValue.slice(0, 6);
+    const isValidBIN = RU_KZ_BINS.includes(bin4) || RU_KZ_BINS.includes(bin6);
+
+    const isValid = isCorrectLength && isFormatValid && isValidBIN;
+
+    // Можно тут выводить результат:
+    console.log("Карта валидна:", isValid);
+
+    if (isValid) {
+      field.classList.remove("invalid");
+    } else {
+      field.classList.add("invalid");
+      errorField.textContent = errorText;
+    }
+  });
+};
+
+formatAndValidateCardNumber();
