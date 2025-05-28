@@ -151,21 +151,46 @@
   display: flex;
 }
 
-.tab-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
+.tab-buttons-wrapper {
   padding: 4px;
-
   border-radius: 12px;
   background-color: var(--bg-black-400);
 }
 
+.tab-buttons {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tab-buttons:has(.tab-btn:nth-child(2).active)::before {
+  left: 50%;
+}
+
+.tab-buttons::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+
+  width: 50%;
+  height: 100%;
+
+  background-color: var(--bg-black-300);
+  border-radius: 8px;
+  transition: left 150ms ease-in-out;
+}
+
 .tab-btn {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  padding: 14px 8px;
 
   font-weight: 500;
   font-size: 18px;
@@ -174,20 +199,6 @@
 
   border-radius: 8px;
   transition: background-color 150ms ease-in-out;
-}
-
-.tab-btn:hover {
-  background-color: var(--bg-black-200);
-}
-
-.tab-btn:active {
-  background-color: var(--bg-black-200);
-}
-
-.tab-btn.active {
-  padding: 14px 8px;
-
-  background-color: var(--bg-black-300);
 }
 
 .limit-card {
