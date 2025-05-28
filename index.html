@@ -52,7 +52,7 @@
 
               <!-- 0 -->
               <div class="tab__panel active">
-                <div class="field invalid">
+                <div class="field" data-field="star-field">
                   <div class="field__input-wrapper">
                     <img
                       width="22"
@@ -61,6 +61,8 @@
                       class="field__icon"
                     />
                     <input
+                      min="100"
+                      max="2400"
                       inputmode="numeric"
                       type="text"
                       class="field__input input"
@@ -72,9 +74,7 @@
                     </button>
                   </div>
 
-                  <div class="field__error-text">
-                    Минимальное количество - 100 звёзд
-                  </div>
+                  <div class="field__error-text"></div>
                 </div>
 
                 <div class="stack-sm">
@@ -132,7 +132,7 @@
 
               <!-- 1 -->
               <div class="tab__panel">
-                <div class="field invalid">
+                <div class="field" data-field="star-field">
                   <div class="field__input-wrapper">
                     <img
                       width="22"
@@ -142,6 +142,8 @@
                     />
 
                     <input
+                      min="500"
+                      max="2400"
                       inputmode="numeric"
                       type="text"
                       class="field__input input"
@@ -153,9 +155,7 @@
                     </button>
                   </div>
 
-                  <div class="field__error-text">
-                    Минимальное количество - 500 звёзд
-                  </div>
+                  <div class="field__error-text"></div>
                 </div>
 
                 <div class="field" data-field="credit-card">

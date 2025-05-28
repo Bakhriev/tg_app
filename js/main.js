@@ -108,7 +108,6 @@ const RU_KZ_BINS = [
 
 const formatAndValidateCardNumber = () => {
   const field = document.querySelector('[data-field="credit-card"]');
-  console.log(field);
 
   if (!field) return;
 
@@ -139,9 +138,6 @@ const formatAndValidateCardNumber = () => {
 
     const isValid = isCorrectLength && isFormatValid && isValidBIN;
 
-    // Можно тут выводить результат:
-    console.log("Карта валидна:", isValid);
-
     if (isValid) {
       field.classList.remove("invalid");
     } else {
@@ -152,3 +148,39 @@ const formatAndValidateCardNumber = () => {
 };
 
 formatAndValidateCardNumber();
+
+const starFieldValidate = () => {
+  const fields = document.querySelectorAll('[data-field="star-field"]');
+
+  if (!fields.length) return;
+
+  fields.forEach((field) => {
+    const input = field.querySelector("input");
+    const minValue = Number(input.getAttribute("min"));
+    const maxValue = Number(input.getAttribute("max"));
+
+    const errorField = field.querySelector(".field__error-text");
+
+    input.addEventListener("input", (e) => {
+      const value = Number(e.target.value);
+
+      if (value < minValue) {
+        field.classList.add("invalid");
+        errorField.textContent = `Минимальное количество - ${minValue} звёзд`;
+
+        return;
+      }
+
+      if (value > maxValue) {
+        field.classList.add("invalid");
+        errorField.textContent = `Максимальное количество - ${maxValue} звёзд`;
+
+        return;
+      }
+
+      field.classList.remove("invalid");
+    });
+  });
+};
+
+starFieldValidate();
