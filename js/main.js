@@ -62,3 +62,20 @@ const copyInit = () => {
 };
 
 copyInit();
+
+const fieldsInit = () => {
+  const fields = document.querySelectorAll(".field");
+
+  if (!fields.length) return;
+
+  fields.forEach((field) => {
+    const input = field.querySelector(".input");
+    const clearBtn = field.querySelector(".field__clear");
+
+    clearBtn.addEventListener("click", () => {
+      input.value = "";
+    });
+  });
+};
+
+fieldsInit();
