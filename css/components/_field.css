@@ -80,10 +80,11 @@
   background-color: var(--bg-black-400);
   border-radius: 12px;
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2;
 }
 
 .input::placeholder {
+  font-size: 14px;
   color: var(--text-300);
 }
