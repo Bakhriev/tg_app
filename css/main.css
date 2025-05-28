@@ -308,3 +308,19 @@
   align-items: center;
   gap: 6px;
 }
+
+.total-sell-card {
+  padding: 16px;
+
+  background-color: var(--bg-black-400);
+  border-radius: 12px;
+}
+
+.total-sell-card__top {
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}

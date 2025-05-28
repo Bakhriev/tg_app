@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="container">
+        <div class="stack-lg">
+          <div class="nav-header">
+            <button class="nav-btn">
+              <div class="nav-btn__icon-wrapper">
+                <img width="8" height="12" src="./icons/arrow_left.svg" />
+              </div>
+            </button>
+            <h1>История</h1>
+          </div>
+
+          <div class="total-sell-card">
+            <div class="total-sell-card__top">
+              <h2>2 567 907</h2>
+              <img width="38" height="22" src="./icons/ranking.svg" />
+            </div>
+
+            <span>Всего продано</span>
+          </div>
+
+          <div class="stack-md">
+            <h2>Последние продажи</h2>
+
+            <div class="stack-sm">
+              <div class="info-card">
+                <img width="32" height="32" src="./icons/folder_open.svg" />
+                <span>Здесь будут отображаться ваши последние продажи </span>
+              </div>
+
+              <!-- dynamic cards -->
+              <div class="stack-sm">
+                <div class="transaction-card">
+                  <div class="transaction-card__left">
+                    <div class="transaction-card__icon-wrapper">
+                      <img width="10" height="10" src="./icons/arrow_up.svg" />
+                    </div>
+                    <div class="transaction-card__amount">
+                      <span>1 250</span>
+                      <img width="16" height="16" src="./icons/star.svg" />
+                    </div>
+                  </div>
+
+                  <div class="transaction-card__right">
+                    <div class="transaction-card__title">Telegram Stars</div>
+                    <div class="transaction-card__info">
+                      <img
+                        width="12"
+                        height="12"
+                        src="./icons/clock.svg"
+                        alt=""
+                      />
+                      <span>04.05.2025 19:58</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="transaction-card">
+                  <div class="transaction-card__left">
+                    <div class="transaction-card__icon-wrapper">
+                      <img width="10" height="10" src="./icons/arrow_up.svg" />
+                    </div>
+                    <div class="transaction-card__amount">
+                      <span>1 250</span>
+                      <img width="16" height="16" src="./icons/star.svg" />
+                    </div>
+                  </div>
+
+                  <div class="transaction-card__right">
+                    <div class="transaction-card__title">Telegram Stars</div>
+                    <div class="transaction-card__info">
+                      <img
+                        width="12"
+                        height="12"
+                        src="./icons/tick_circle.svg"
+                        alt=""
+                      />
+                      <span>04.05.2025 19:58</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- dynamic cards -->
+
+              <button class="btn-secondary">Показать еще</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
